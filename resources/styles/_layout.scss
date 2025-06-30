@@ -1,0 +1,14 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.75rem;
+
+    padding: 0.5rem;
+
+    button {
+        width: 1rlh;
+        height: 1rlh;
+        cursor: pointer;
+    }
+}

@@ -13,6 +13,10 @@
 </head>
 
 <body>
+    <header>
+        <span class="title">{{ $title ?? config('app.name') }}</span>
+        <button type='button' onclick='window.location.href="/"'>X</button>
+    </header>
     {{ $slot }}
 </body>
 

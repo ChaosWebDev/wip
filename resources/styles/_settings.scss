@@ -1,3 +1,97 @@
+$mainGap: 2%;
+
 main#settings {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: $mainGap;
+
+    padding: $mainGap;
+    height: 100%;
+
+    >section {
+        border: 1px solid var(--borderColor);
+        border-radius: 10px;
+
+        padding: 1rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        overflow-y: auto;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--important);
+            text-decoration: underline;
+        }
+
+        .cards,
+        .cards .card {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            gap: 1rem;
+        }
+
+        .cards .card {
+            border: 1px solid var(--borderColor);
+            border-radius: 10px;
+            padding: 1rem;
+
+            div:nth-of-type(odd) {
+                text-align: right;
+            }
+
+            &:hover {
+                border-color: var(--danger);
+                cursor: pointer;
+            }
+        }
+    }
+
+    modal {
+        width: 100%;
+        height: 100%;
+        background: rgba(0.8, 0.8, 0.8, 0.8);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: fixed;
+        z-index: 2;
+
+        window {
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            width: clamp(400px, 60%, 80%);
+            height: clamp(300px, 60%, 80%);
+
+            background: var(--bodyBG);
+            color: var(--bodyFG);
+            border: 1px solid var(--borderColor);
+
+            padding: 1rem;
+            z-index: 3;
+
+            note {
+                position: absolute;
+                bottom: 0.25rem;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                font-size: 0.8rem;
+            }
+        }
+    }
 }
