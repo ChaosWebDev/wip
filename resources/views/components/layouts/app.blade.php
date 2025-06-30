@@ -7,6 +7,7 @@
 
     <title>{{ $title ?? config('app.name') }}</title>
 
+    <link rel="shortcut icon" href="storage/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://www.nerdfonts.com/assets/css/webfont.css">
     @vite(['resources/styles/app.scss', 'resources/scripts/app.js'])
 </head>
