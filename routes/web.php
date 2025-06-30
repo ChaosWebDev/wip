@@ -1,6 +1,8 @@
 <?php
 
+use App\Livewire\Drive;
 use App\Livewire\Desktop;
+use App\Livewire\Weather;
 use App\Livewire\Settings;
 use Illuminate\Support\Facades\Route;
 
@@ -16,12 +18,12 @@ Route::prefix('medical')->name('medical.')->group(function () {
 
 // * DRIVE ROUTES * //
 Route::prefix('drive')->name('drive.')->group(function () {
-    Route::get('/', Desktop::class)->name('index');
+    Route::get('/', Drive::class)->name('index');
 });
 
 // * WEATHER ROUTES * //
 Route::prefix('weather')->name('weather.')->group(function () {
-    Route::get('/', Desktop::class)->name('index');
+    Route::get('/', Weather::class)->name('index');
 });
 
 // * SCHOOL ROUTES * //
