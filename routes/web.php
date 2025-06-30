@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Desktop;
 use App\Livewire\Dashboard;
 use App\Livewire\Auth\Login;
 use App\Livewire\Auth\Register;
@@ -14,7 +15,7 @@ Route::middleware('guest')->group(function () {
 });
 
 // ! OPEN ROUTES ! //
-Route::get('/', Dashboard::class)->name('dashboard');
+Route::get('/', Desktop::class)->name('desktop');
 
 // ! AUTHENTICATED ROUTES ! //
 Route::middleware('auth')->group(function () {
@@ -32,6 +33,6 @@ if (app()->environment('local')) {
     Route::get('/clear', function () {
         Artisan::call('optimize:clear');
         Auth::logout();
-        return redirect()->route('dashboard');
+        return redirect()->route('desktop');
     });
 }
