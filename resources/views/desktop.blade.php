@@ -21,3 +21,18 @@
     </div>
 
 </main>
+
+
+@script
+    <script type='module'>
+        const icons = document.querySelectorAll('.icon');
+
+        icons.forEach(function(el) {
+            el.addEventListener('click', function() {
+                const url = el.dataset.url;
+
+                window.location.href = url;
+            });
+        });
+    </script>
+@endscript
