@@ -20,6 +20,11 @@
         <h3>School</h3>
     </div>
 
+    <div class="icon" id="settings-icon" data-url="{{ route('settings') }}">
+        <img src="{{ asset('storage/icons/settings.svg') }}" alt="settings-icon">
+        <h3>Settings</h3>
+    </div>
+
 </main>
 
 
