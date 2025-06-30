@@ -12,16 +12,24 @@ use Illuminate\Support\Facades\Artisan;
 Route::get('/', Desktop::class)->name('desktop');
 
 // * MEDICAL ROUTES * //
-// Route::prefix('medical')->name('medical.')->group(function() {})
+Route::prefix('medical')->name('medical.')->group(function () {
+    Route::get('/', Desktop::class)->name('index');
+});
 
 // * DRIVE ROUTES * //
-// Route::prefix('drive')->name('drive.')->group(function() {})
+Route::prefix('drive')->name('drive.')->group(function () {
+    Route::get('/', Desktop::class)->name('index');
+});
 
 // * WEATHER ROUTES * //
-// Route::prefix('weather')->name('weather.')->group(function() {})
+Route::prefix('weather')->name('weather.')->group(function () {
+    Route::get('/', Desktop::class)->name('index');
+});
 
 // * SCHOOL ROUTES * //
-// Route::prefix('school')->name('school.')->group(function() {})
+Route::prefix('school')->name('school.')->group(function () {
+    Route::get('/', Desktop::class)->name('index');
+});
 
 
 
